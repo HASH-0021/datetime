@@ -1,0 +1,23 @@
+#current-date-time-container {
+  margin: 0 auto;
+  padding: 5vh 0;
+  width: 75%;
+}
+
+#display-container, #options-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-contents {
+  margin: 0 auto;
+  min-width: 50%;
+  min-height: 20vh;
+  text-align: center;
+}
+
+.current-date-time {
+  margin: 5vh 1.5px;
+  font-size: 2rem;
+}

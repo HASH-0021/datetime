@@ -1,0 +1,75 @@
+#timer-container {
+  padding: 5vh 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer-time {
+  margin: 2vh 1.5px;
+  font-size: 2.7rem;
+}
+
+.timer-time > input {
+  max-width: 62px;
+  font-size: 2.7rem;
+  text-align: right;
+}
+.timer-time > #input-milli-second {
+  max-width: 85px;
+}
+#timer-options {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#timer-options > button {
+  margin: 10px auto;
+  padding: 7px;
+  width: 100%;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 15px;
+  transition: scale 0.25s;
+}
+
+@media screen and (min-width: 400px) {
+  #timer-options > button {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #timer-options > button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    scale: 1.05 1.05;
+  }
+  
+  #timer-options > button {
+    width: calc(50% - 8px);
+  }
+}
+
+#timer-options > button:disabled {
+  background-color: #ddd;
+  transition: none;
+  cursor: not-allowed;
+}
+
+#timer-options > button:active {
+  color: white;
+  background-color: black;
+  scale: 0.95 0.95;
+}
+
+#timer-options > button:disabled:hover, #timer-options > button:disabled:active {
+  color: black;
+  background-color: #ddd;
+  scale: none;
+}

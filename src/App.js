@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import MuiDrawer from './Helpers/MuiDrawer';
+import CurrentDateTime from './Components/CurrentDateTime';
+import StopWatch from './Components/StopWatch';
+import Timer from './Components/Timer';
+import YearStatus from './Components/YearStatus';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+const App = () => {
+
+  const tabs = ["Current Date and Time","Stop Watch","Timer","Year Status"];
+
+  const [activeTab,setActiveTab] = useState(tabs[0]);
+  
+  return(
+    <main>
+      <MuiDrawer tabs = {tabs} setActiveTab = {setActiveTab} />
+      <header>
+        <h2>{activeTab}</h2>
       </header>
-    </div>
-  );
+      <section>
+        {activeTab === "Stop Watch" ? <StopWatch />
+          : activeTab === "Timer" ? <Timer />
+          : activeTab === "Year Status" ? <YearStatus />
+          : <CurrentDateTime />
+        }
+      </section>
+    </main>
+  )
 }
 
 export default App;

@@ -1,0 +1,67 @@
+#stop-watch-container {
+  padding: 5vh 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stop-watch-time {
+  margin: 2vh 1.5px;
+  font-size: 2.7rem;
+}
+
+#stop-watch-options {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#stop-watch-options > button {
+  margin: 10px auto;
+  padding: 7px;
+  width: 100%;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 15px;
+  transition: scale 0.25s;
+}
+
+@media screen and (min-width: 400px) {
+  #stop-watch-options > button {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #stop-watch-options > button:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    scale: 1.05 1.05;
+  }
+  
+  #stop-watch-options > button {
+    width: calc(50% - 8px);
+  }
+}
+
+#stop-watch-options > button:disabled {
+  background-color: #ddd;
+  transition: none;
+  cursor: not-allowed;
+}
+
+#stop-watch-options > button:active {
+  color: white;
+  background-color: black;
+  scale: 0.95 0.95;
+}
+
+#stop-watch-options > button:disabled:hover, #stop-watch-options > button:disabled:active {
+  color: black;
+  background-color: #ddd;
+  scale: none;
+}

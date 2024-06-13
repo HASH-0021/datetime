@@ -1,0 +1,20 @@
+#completed-container,#remaining-container {
+	margin: 0 auto;
+	width: 40%;
+	text-align: center;
+}
+
+#year-status-options {
+	width: 100%;
+}
+
+#progress-value {
+	width: 100%;
+	text-align: center;
+}
+
+@media screen and (max-width: 601px) {
+	#completed-container,#remaining-container {
+		width: 100%;
+	}
+}
